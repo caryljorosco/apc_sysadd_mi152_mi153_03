@@ -1,2 +1,10 @@
 Gene Carlo Alanza Bongat
+<<<<<<< HEAD
 Giomar Tesorero Andres
+=======
+<<<<<<< HEAD
+Gabriel Angelo A. Ngceen
+=======
+Edward Joseph R. Mandac
+>>>>>>> 4b738864da60a73ca06d8e5529d8ea90830f4489
+>>>>>>> ebaa4dfc27cfb91296b6692b163f14d1aa45f556
