@@ -1,0 +1,6 @@
+INSERT INTO CUSTOMER (ID, Last_Name, First_Name, Middle_Name, Contact_Number) 
+
+VALUES (0, 'Carlo', 'Bongat', 'B', '09156871825'), 
+		(0, 'Last', 'First', 'M', '09123561928'), 
+			(0, 'Zell', 'Mike', 'Z', '09255047382'), 
+				(0, 'Orosco','Caryl', 'C', '09352954092')
