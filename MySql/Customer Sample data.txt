@@ -4,3 +4,5 @@ VALUES (1, 'Carlo', 'Bongat', 'B', '09156871825'),
 (2, 'Robin', 'Christopher', 'M', '09123561928'), 
 (3 'Zell', 'Mike', 'Z', '09255047382'), 
 (4, 'Orosco','Caryl', 'C', '09352954092'),
+(5, 'Zobel', 'Jean', 'D', '09257799076'),
+
