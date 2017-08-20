@@ -7,5 +7,6 @@ VALUES (1, 'Carlo', 'Bongat', 'B', '09156871825'),
 (5, 'Zobel', 'Jean', 'D', '09257799076'),
 (6, 'Carbo', 'Ruth', 'B', '09998765456'),
 (7, 'Gomez', 'Rick', 'G', '09756792134'),
-(8, 'Alejandro', 'Roberto', 'F', '09786543012')
+(8, 'Alejandro', 'Roberto', 'F', '09786543012'),
+(9, 'Forbes', 'Nami', 'L', '09678564532'),
 
