@@ -2,10 +2,10 @@ INSERT INTO CUSTOMER (ID, Last_Name, First_Name, Middle_Name, Contact_Number)
 
 VALUES (1, 'Carlo', 'Bongat', 'B', '09156871825'), 
 (2, 'Robin', 'Christopher', 'M', '09123561928'), 
-(3 'Zell', 'Mike', 'Z', '09255047382'), 
+(3, 'Zell', 'Mike', 'Z', '09255047382'), 
 (4, 'Orosco','Caryl', 'C', '09352954092'),
 (5, 'Zobel', 'Jean', 'D', '09257799076'),
 (6, 'Carbo', 'Ruth', 'B', '09998765456'),
 (7, 'Gomez', 'Rick', 'G', '09756792134'),
-
+(8, 'Alejandro', 'Roberto', 'F', '09786543012')
 
