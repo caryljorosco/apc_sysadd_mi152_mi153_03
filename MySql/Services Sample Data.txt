@@ -40,3 +40,5 @@ VALUES
 ('Express Massage', 'sample', '30 minutes', '2000.00'),
 ('Deep Tissue Massage', 'sample', '60 minutes', '3750.00'),
 ('Deep Cleansing Facial', 'sample', '60 minutes', '3500.00'),
+('Sensitive Skin Facial', 'sample', '60 minutes', '4000.00'),
+('Collagen Facial', 'sample', '60 minutes', '7500.00'),
