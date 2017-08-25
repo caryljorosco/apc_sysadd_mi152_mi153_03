@@ -12,4 +12,4 @@ VALUES
 ('Vitamin & Tangerine Vitalizer', 'sample', '60 minutes', '5000.00'),
 ('Advanced Age Defying Facial', 'sample', '60 minutes', '5000.00'),
 ('Ultimate Age Defying Facial Ritual', 'sample', '90 minutes', '6500.00'),
-
+('The Back Facial', 'sample', '90 minutes', '7750.00'),
