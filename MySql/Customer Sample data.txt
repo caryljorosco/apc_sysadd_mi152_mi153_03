@@ -31,3 +31,4 @@ VALUES
 ('Roe','Greg', 'Jairo', '09979554221'),
 ('Tanner','Rolly', 'Aaric', '09956789030'),
 ('Everardo','Brennan', 'Lavar', '09277893332'),
+('Evans','Chris', 'Arda', '09956678434'),
