@@ -28,3 +28,4 @@ VALUES
 ('Gol','Roger', 'Drakkar', '09998985256'),
 ('Roronoa','Zoro', 'Hunter', '09977898964'),
 ('Vinsmoke','Sanji', 'Black', '09956784432'),
+('Jairo','Greg', 'Roe', '09979554221'),
