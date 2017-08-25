@@ -22,3 +22,5 @@ VALUES
 ('Aqua Body Polish', 'sample', '30 minutes', '4250.00'),
 ('Bamboo Ginseng Hydration Wrap', 'sample', '45 minutes', '5000.00'),
 ('Coffee Almond Hydration Wrap', 'sample', '45 minutes', '5000.00'),
+('Deep Detox Moroccan Ritual', 'sample', '60 minutes', '6000.00'),
+('Palma Rosa & Jojoba Firming Lift', 'sample', '60 minutes', '6500.00'),
