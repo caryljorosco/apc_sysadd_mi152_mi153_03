@@ -1,9 +1,9 @@
-INSERT INTO CUSTOMER (ID, Last_Name, First_Name, Middle_Name, Contact_Number) 
+INSERT INTO CUSTOMER (Last_Name, First_Name, Middle_Name, Contact_Number) 
 
-VALUES (1, 'Bongat', 'Carlo', 'Alanza', '09156871825'), 
+VALUES (1, 'Bongat', 'Carlo', 'Alfonso', '09156871825'), 
 (2, 'Robin', 'Christopher', 'Magallanes', '09123561928'), 
 (3, 'Zell', 'Mike', 'Zuckberger', '09255047382'), 
-(4, 'Orosco','Caryl', 'C', '09352954092'),
+(4, 'Orosco','Caryl', 'Cahit', '09352954092'),
 (5, 'Zobel', 'Jean', 'D', '09257799076'),
 (6, 'Carbo', 'Ruth', 'B', '09998765456'),
 (7, 'Gomez', 'Rick', 'G', '09756792134'),
