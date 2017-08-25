@@ -50,3 +50,5 @@ VALUES
 ('Zamolochikova', 'Yekaterina', 'Petrovna', '08877990087'),
 ('Coulee', 'Shea', 'Neptune', '09554356721'),
 ('Andrews', 'Roxxxy', 'Pluto', '09765433219'),
+('Mattel', 'Trixie', 'Barbie', '09565678980'),
+('Smalls', 'Naomi', 'Lyrca', '09088761123'),
