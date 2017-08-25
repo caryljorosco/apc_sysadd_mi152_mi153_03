@@ -37,3 +37,4 @@ VALUES
 ('Paton','Jelly', 'Demitri', '09755432221'),
 ('Stefan','Bobby', 'Hasani', '09276432556'),
 ('Cruz','Nessy', 'Contigo', '09556687936'),
+('Rien','Kaleb', 'Hunt', '09553321456'),
