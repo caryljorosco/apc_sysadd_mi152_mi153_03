@@ -15,4 +15,7 @@ VALUES
 ('The Back Facial', 'sample', '90 minutes', '7750.00'),
 ('Hot Bamboo Massage', 'sample', '90 minutes', '8750.00'),
 ('Relaxenergy', 'sample', '60 minutes', '5000.00'),
-('Energizing Thai Massage', 'sample', '90 minutes', '8500.00')
+('Energizing Thai Massage', 'sample', '90 minutes', '8500.00'),
+('Sinus Relief Massage', 'sample', '30 minutes', '4000.00'),
+('Hot Stone', 'sample', '90 minutes', '8000.00'),
+('Cellulite Reduction Massage', 'sample', '90 minutes', '8500.00'),
