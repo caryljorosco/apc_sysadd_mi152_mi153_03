@@ -36,3 +36,4 @@ VALUES
 ('Tremaine','Dale', 'Rollins', '09955554789'),
 ('Paton','Jelly', 'Demitri', '09755432221'),
 ('Stefan','Bobby', 'Hasani', '09276432556'),
+('Cruz','Nessy', 'Contigo', '09556687936'),
