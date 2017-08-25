@@ -5,5 +5,4 @@ VALUES
 ('Aloe & Mango Soothing Facial', 'sample', '60 minutes', '5000.00'),
 ('Signature Transformation Facial', 'sample', '60 minutes', '5000.00'),
 ('Eucalyptus Clarifying Facial', 'sample', '60 minutes', '5000.00'),
-
-
+('Transformation Resurfacing Treatment', 'sample', '30 minutes, '5750.00'),
