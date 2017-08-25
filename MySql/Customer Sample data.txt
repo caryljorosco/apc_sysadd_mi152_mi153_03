@@ -39,3 +39,4 @@ VALUES
 ('Cruz','Nessy', 'Contigo', '09556687936'),
 ('Rien','Kaleb', 'Hunt', '09553321456'),
 ('Gregory','Istvan', 'Mihailo', '09275554356'),
+('Paz','Leni', 'Gregorio', '09978985654'),
