@@ -25,3 +25,4 @@ VALUES
 ('Burgos','Clarence', 'Viganto', '09357788832'),
 ('Yurie','Brendon', 'Belgian', '09276668754'),
 ('Monkey','Luffy', 'Dragon', '09276432666'),
+('Gol','Roger', 'Drakkar', '09956432256'),
