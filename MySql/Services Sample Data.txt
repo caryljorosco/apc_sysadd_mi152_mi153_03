@@ -39,3 +39,4 @@ VALUES
 ('Polish Change - Feet', 'sample', '20 minutes', '650.00'),
 ('Express Massage', 'sample', '30 minutes', '2000.00'),
 ('Deep Tissue Massage', 'sample', '60 minutes', '3750.00'),
+('Deep Cleansing Facial', 'sample', '60 minutes', '3500.00'),
