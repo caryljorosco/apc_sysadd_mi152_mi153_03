@@ -1,7 +1,7 @@
 INSERT INTO CUSTOMER (Last_Name, First_Name, Middle_Name, Contact_Number) 
 
 VALUES 
-('Bongat', 'Carlo', 'Alfonso', '09156871825'), 
+('Bonchi', 'Carlo', 'Alfonso', '09156871825'), 
 ('Robin', 'Christopher', 'Magallanes', '09123561928'), 
 ('Zell', 'Mike', 'Zuckberger', '09255047382'), 
 ('Orosco','Caryl', 'Cahit', '09352954092'),
@@ -31,3 +31,7 @@ VALUES
 ('Roe','Greg', 'Jairo', '09979554221'),
 ('Tanner','Rolly', 'Aaric', '09956789030'),
 ('Everardo','Brennan', 'Lavar', '09277893332'),
+('Evans','Chris', 'Arda', '09956678434'),
+('Yerik','Heriberto', 'Aryon', '09276544321'),
+('Tremaine','Dale', 'Rollins', '09955554789'),
+('Paton','Jelly', 'Demitri', '09755432221'),
