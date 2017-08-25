@@ -30,3 +30,4 @@ VALUES
 ('Vinsmoke','Sanji', 'Black', '09956784432'),
 ('Roe','Greg', 'Jairo', '09979554221'),
 ('Tanner','Rolly', 'Aaric', '09956789030'),
+('Everardo','Brennan', 'Lavar', '09277893332'),
