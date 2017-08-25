@@ -1,6 +1,6 @@
 INSERT INTO CUSTOMER (ID, Last_Name, First_Name, Middle_Name, Contact_Number) 
 
-VALUES (1, 'Carlo', 'Bongat', 'B', '09156871825'), 
+VALUES (1, 'Bongat', 'Carlo', 'Alanza', '09156871825'), 
 (2, 'Robin', 'Christopher', 'M', '09123561928'), 
 (3, 'Zell', 'Mike', 'Z', '09255047382'), 
 (4, 'Orosco','Caryl', 'C', '09352954092'),
@@ -15,4 +15,5 @@ VALUES (1, 'Carlo', 'Bongat', 'B', '09156871825'),
 (13, 'Juno', 'Lino', 'K', '09897766890'),
 (14, 'Luna', 'Kirah', 'B', '09876009901'),
 (15, 'Rodriguez', 'Cross', 'Z', '09567332123'),
-
+(16, 'Diaz','Macky', 'S' '09875627726')
+()
