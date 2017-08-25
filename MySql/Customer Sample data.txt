@@ -24,3 +24,4 @@ VALUES
 ('Zamora','Francheska', 'Tolosa', '09945763256'),
 ('Burgos','Clarence', 'Viganto', '09357788832'),
 ('Yurie','Brendon', 'Belgian', '09276668754'),
+('Monkey','Luffy', 'Dragon', '09276432666'),
