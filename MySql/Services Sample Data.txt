@@ -1,0 +1,7 @@
+INSERT INTO SERVICES(Service_Name, Description, Duration, Price);
+
+VALUES
+('Essential Facial Treatment', 'sample', '50 minutes', '4750.00'),
+('Aloe & Mango Soothing Facial', 'sample', '60 minutes', '5000.00'),
+(Signature Transformation Facial, 'sample', '60 minutes', '5000.00'),
+
