@@ -41,3 +41,4 @@ VALUES
 ('Gregory','Istvan', 'Mihailo', '09275554356'),
 ('Paz','Leni', 'Gregorio', '09978985654'),
 ('Curry','Chanel', 'Vinales', '09276657732'),
+('Tatyanna', 'Eszter', 'Corinne', '09976664321'),
