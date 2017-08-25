@@ -8,7 +8,7 @@ VALUES
 ('Zobel', 'Jean', 'D', '09257799076'),
 ('Carbo', 'Ruth', 'B', '09998765456'),
 ('Gomez', 'Rick', 'G', '09756792134'),
-(8, 'Alejandro', 'Roberto', 'F', '09786543012'),
+('Alejandro', 'Roberto', 'F', '09786543012'),
 (9, 'Forbes', 'Nami', 'L', '09678564532'),
 (10, 'Vallado', 'Jamie', 'D', '09876540981'),
 (11, 'Grey', 'Alexander', 'B', '09097890675'),
