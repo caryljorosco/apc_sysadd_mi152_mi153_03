@@ -16,5 +16,13 @@ VALUES
 ('Juno', 'Lino', 'Kelp', '09897766890'),
 ('Luna', 'Kirah', 'Bean', '09876009901'),
 ('Rodriguez', 'Cross', 'Zaldo', '09567332123'),
-('Diaz','Macky', 'Suarez' '09875627726')
-()
+('Diaz','Macky', 'Serra', '09875627726'),
+('Labro','Gart', 'Fulso', '09956432256'),
+('Selven','Gerry', 'Costey', '09554321135'),
+('Borgandi','Layla', 'Quinto', '09854441123'),
+('Heaven','Lim', 'Felix', '09558885543'),
+('Zamora','Francheska', 'Tolosa', '09945763256'),
+('Burgos','Clarence', 'Viganto', '09357788832'),
+('Yurie','Brendon', 'Belgian', '09276668754'),
+('Monkey','Luffy', 'Dragon', '09276432666'),
+('Gol','Roger', 'Drakkar', '09956432256'),
