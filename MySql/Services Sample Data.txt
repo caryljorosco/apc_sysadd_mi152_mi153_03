@@ -19,3 +19,4 @@ VALUES
 ('Sinus Relief Massage', 'sample', '30 minutes', '4000.00'),
 ('Hot Stone', 'sample', '90 minutes', '8000.00'),
 ('Cellulite Reduction Massage', 'sample', '90 minutes', '8500.00'),
+('Aqua Body Polish', 'sample', '30 minutes', '4250.00'),
