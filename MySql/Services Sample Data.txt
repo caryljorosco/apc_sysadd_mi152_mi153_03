@@ -37,3 +37,4 @@ VALUES
 ('Shellac Pedicure', 'sample', '30 minutes', '3250.00'),
 ('Polish Change - Hands', 'sample', '15 minutes', '500.00'),
 ('Polish Change - Feet', 'sample', '20 minutes', '650.00'),
+('Express Massage', 'sample', '30 minutes', '2000.00'),
