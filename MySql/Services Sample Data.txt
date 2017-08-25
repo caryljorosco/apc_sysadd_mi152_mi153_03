@@ -8,4 +8,6 @@ VALUES
 ('Transformation Resurfacing Treatment', 'sample', '30 minutes', '5750.00'),
 ('Men's Age Defying Face Restoration', 'sample', '30 minutes', '4000.00'),
 ('Men's Age Defying Transformation Facial', 'sample', '60 minutes', '4750.00'),
-('Bearbury Brightening Facial', 'sample', '60 minutes', '5000.00')
+('Bearbury Brightening Facial', 'sample', '60 minutes', '5000.00'),
+('Vitamin & Tangerine Vitalizer', 'sample', '60 minutes', '5000.00'),
+
