@@ -10,4 +10,5 @@ VALUES
 ('Men's Age Defying Transformation Facial', 'sample', '60 minutes', '4750.00'),
 ('Bearbury Brightening Facial', 'sample', '60 minutes', '5000.00'),
 ('Vitamin & Tangerine Vitalizer', 'sample', '60 minutes', '5000.00'),
+('Advanced Age Defying Facial', 'sample', '60 minutes', '5000.00'),
 
