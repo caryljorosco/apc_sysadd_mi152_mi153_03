@@ -34,3 +34,4 @@ VALUES
 ('Evans','Chris', 'Arda', '09956678434'),
 ('Yerik','Heriberto', 'Aryon', '09276544321'),
 ('Tremaine','Dale', 'Rollins', '09955554789'),
+('Paton','Jelly', 'Demitri', '09755432221'),
