@@ -33,3 +33,7 @@ VALUES
 ('Sport Pedicure', 'sample', '30 minutes', '2250.00'),
 ('Hot Stone Manicure', 'sample', '20 minutes', '2750.00'),
 ('Hot Stone Pedicure', 'sample', '30 minutes', '3750.00'),
+('ShellaC Manicure', 'sample', '20 minutes', '2250.00'),
+('Shellac Pedicure', 'sample', '30 minutes', '3250.00'),
+('Polish Change - Hands', 'sample', '15 minutes', '500.00'),
+('Polish Change - Feet', 'sample', '20 minutes', '650.00'),
