@@ -27,3 +27,4 @@ VALUES
 ('Monkey','Luffy', 'Dragon', '09276432666'),
 ('Gol','Roger', 'Drakkar', '09998985256'),
 ('Roronoa','Zoro', 'Hunter', '09977898964'),
+('Vinsmoke','Sanji', 'Black', '09956784432'),
