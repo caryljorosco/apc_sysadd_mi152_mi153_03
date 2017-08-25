@@ -47,3 +47,6 @@ VALUES
 ('Sydney', 'Allyssa', 'Rosina', '09985558775'),
 ('Kylee', 'Amie', 'Rally', '09966533271'),
 ('Velour', 'Sasha', 'Jupiter', '098908070606'),
+('Zamolochikova', 'Yekaterina', 'Petrovna', '08877990087'),
+('Coulee', 'Shea', 'Neptune', '09554356721'),
+('Andrews', 'Roxxxy', 'Pluto', '09765433219'),
