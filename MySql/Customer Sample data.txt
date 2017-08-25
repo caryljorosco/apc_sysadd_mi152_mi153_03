@@ -16,5 +16,5 @@ VALUES
 ('Juno', 'Lino', 'Kelp', '09897766890'),
 ('Luna', 'Kirah', 'Bean', '09876009901'),
 ('Rodriguez', 'Cross', 'Zaldo', '09567332123'),
-('Diaz','Macky', 'S' '09875627726')
+('Diaz','Macky', 'Suarez' '09875627726')
 ()
