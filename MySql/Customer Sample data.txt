@@ -40,3 +40,4 @@ VALUES
 ('Rien','Kaleb', 'Hunt', '09553321456'),
 ('Gregory','Istvan', 'Mihailo', '09275554356'),
 ('Paz','Leni', 'Gregorio', '09978985654'),
+('Curry','Chanel', 'Vinales', '09276657732'),
