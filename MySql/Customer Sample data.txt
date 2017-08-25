@@ -45,3 +45,4 @@ VALUES
 ('Heath', 'Barbie', 'Chiara', '09276658876'),
 ('Courtney', 'Leah', 'Orla', '09955432211'),
 ('Sydney', 'Allyssa', 'Rosina', '09985558775'),
+('Kylee', 'Amie', 'Rally', '09966533271'),
