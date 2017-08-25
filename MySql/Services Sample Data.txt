@@ -27,3 +27,5 @@ VALUES
 ('Cardamon & Neroli Soul to Sole', 'sample', '90 minutes', '7750.00'),
 ('Aqua Manicure', 'sample', '20 minutes', '1250.00'),
 ('Aqua Pedicure', 'sample', '30 minutes', '2250.00'),
+('Spa Manicure', 'sample', '20 minutes', '1750.00'),
+('Spa Pedicure', 'sample', '30 minutes', '2750.00'),
