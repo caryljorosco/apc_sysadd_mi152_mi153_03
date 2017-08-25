@@ -53,3 +53,5 @@ VALUES
 ('Mattel', 'Trixie', 'Barbie', '09565678980'),
 ('Smalls', 'Naomi', 'Lyrca', '09088761123'),
 ('Chachki', 'Violet', 'Luna', '09564321678'),
+('Liaison', 'Pearl', 'Shell', '09765432189'),
+('Vuitton', 'Valentina', 'Hermosa', '09876567894'),
