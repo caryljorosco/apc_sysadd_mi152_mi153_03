@@ -12,7 +12,7 @@ VALUES
 ('Forbes', 'Nami', 'Lopez', '09678564532'),
 ('Vallado', 'Jamie', 'Delta', '09876540981'),
 ('Grey', 'Alexander', 'Button', '09097890675'),
-('Ham', 'Gray', 'F', '09879086544'),
+('Ham', 'Gray', 'Fajardo', '09879086544'),
 ('Juno', 'Lino', 'K', '09897766890'),
 ('Luna', 'Kirah', 'B', '09876009901'),
 ('Rodriguez', 'Cross', 'Z', '09567332123'),
