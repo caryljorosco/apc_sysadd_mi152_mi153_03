@@ -15,6 +15,6 @@ VALUES
 ('Ham', 'Gray', 'Fajardo', '09879086544'),
 ('Juno', 'Lino', 'Kelp', '09897766890'),
 ('Luna', 'Kirah', 'Bean', '09876009901'),
-('Rodriguez', 'Cross', 'Z', '09567332123'),
+('Rodriguez', 'Cross', 'Zaldo', '09567332123'),
 ('Diaz','Macky', 'S' '09875627726')
 ()
