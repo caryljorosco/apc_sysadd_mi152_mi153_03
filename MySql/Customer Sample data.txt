@@ -11,7 +11,7 @@ VALUES
 ('Alejandro', 'Roberto', 'Faux', '09786543012'),
 ('Forbes', 'Nami', 'Lopez', '09678564532'),
 ('Vallado', 'Jamie', 'D', '09876540981'),
-(11, 'Grey', 'Alexander', 'B', '09097890675'),
+('Grey', 'Alexander', 'B', '09097890675'),
 (12, 'Ham', 'Gray', 'F', '09879086544'),
 (13, 'Juno', 'Lino', 'K', '09897766890'),
 (14, 'Luna', 'Kirah', 'B', '09876009901'),
