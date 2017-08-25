@@ -52,3 +52,4 @@ VALUES
 ('Andrews', 'Roxxxy', 'Pluto', '09765433219'),
 ('Mattel', 'Trixie', 'Barbie', '09565678980'),
 ('Smalls', 'Naomi', 'Lyrca', '09088761123'),
+('Chachki', 'Violet', 'Luna', '09564321678'),
