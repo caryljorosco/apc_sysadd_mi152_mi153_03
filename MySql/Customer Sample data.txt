@@ -55,3 +55,5 @@ VALUES
 ('Chachki', 'Violet', 'Luna', '09564321678'),
 ('Liaison', 'Pearl', 'Shell', '09765432189'),
 ('Vuitton', 'Valentina', 'Hermosa', '09876567894'),
+('Michelle', 'Alexis', 'Matt', '09887603214'),
+('Mansfield', 'Jaymes', 'June', '09860123147'),
