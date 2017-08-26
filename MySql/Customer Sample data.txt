@@ -57,3 +57,5 @@ VALUES
 ('Vuitton', 'Valentina', 'Hermosa', '09876567894'),
 ('Michelle', 'Alexis', 'Matt', '09887603214'),
 ('Mansfield', 'Jaymes', 'June', '09860123147'),
+('Estranja', 'Laganja', 'Jay', '09563458789'),
+('Delano', 'Adore', 'Maximo', '09886433217'),
