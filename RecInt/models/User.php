@@ -13,17 +13,45 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
     private static $users = [
         '100' => [
             'id' => '100',
-            'username' => 'admin',
-            'password' => 'admin',
+            'username' => 'Caryl',
+            'password' => 'Orosco',
             'authKey' => 'test100key',
             'accessToken' => '100-token',
         ],
         '101' => [
             'id' => '101',
-            'username' => 'demo',
-            'password' => 'demo',
+            'username' => 'Gabby',
+            'password' => 'Ngceen',
             'authKey' => 'test101key',
             'accessToken' => '101-token',
+        ],
+		'102' => [
+            'id' => '102',
+            'username' => 'Edward',
+            'password' => 'Mandac',
+            'authKey' => 'test102key',
+            'accessToken' => '102-token',
+        ],
+		'103' => [
+            'id' => '103',
+            'username' => 'Antonio',
+            'password' => 'Garinga',
+            'authKey' => 'test103key',
+            'accessToken' => '103-token',
+        ],
+		'104' => [
+            'id' => '104',
+            'username' => 'Carlo',
+            'password' => 'Bongat',
+            'authKey' => 'test104key',
+            'accessToken' => '104-token',
+        ],
+		'105' => [
+            'id' => '105',
+            'username' => 'Giomar',
+            'password' => 'Andres',
+            'authKey' => 'test105key',
+            'accessToken' => '105-token',
         ],
     ];
 
