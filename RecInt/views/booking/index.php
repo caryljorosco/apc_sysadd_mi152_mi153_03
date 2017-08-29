@@ -28,6 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'Booking Type',
             'Date and Time',
             'Customer',
+            'Employee',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
