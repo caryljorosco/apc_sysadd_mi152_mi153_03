@@ -34,7 +34,7 @@ $this->title = 'Reservation System (Asmara Spa)';
                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                     fugiat nulla pariatur.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">View &raquo;</a></p>
+                <p><?= Html::a('View &raquo', ['/booking/index'], ['class'=>'btn btn-default']) ?></a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Create a Report</h2>
@@ -44,7 +44,7 @@ $this->title = 'Reservation System (Asmara Spa)';
                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                     fugiat nulla pariatur.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Create &raquo;</a></p>
+                
             </div>
         </div>
 
