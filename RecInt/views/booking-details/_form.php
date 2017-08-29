@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use app\models\Employee;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\BookingDetails */
@@ -14,7 +16,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Booking_ID')->textInput() ?>
 
-    <?= $form->field($model, 'Employee_ID')->textInput() ?>
+	<?= $form->field($model, 'Employee_ID')->dropDownList(
+		ArrayHelper::map(Employee::find()->all(),'ID','Last_Name','Position')
+		)?>
 
     <?= $form->field($model, 'Services_ID')->textInput() ?>
 

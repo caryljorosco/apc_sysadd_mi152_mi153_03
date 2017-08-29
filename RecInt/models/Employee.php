@@ -31,8 +31,7 @@ class Employee extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['ID', 'Last_Name', 'First_Name', 'Position'], 'required'],
-            [['ID'], 'integer'],
+            [['Last_Name', 'First_Name', 'Position'], 'required'],
             [['Last_Name', 'First_Name', 'Position'], 'string', 'max' => 45],
         ];
     }

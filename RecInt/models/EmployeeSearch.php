@@ -8,9 +8,9 @@ use yii\data\ActiveDataProvider;
 use app\models\Employee;
 
 /**
- * EmployeerSearch represents the model behind the search form about `app\models\Employee`.
+ * EmployeeSearch represents the model behind the search form about `app\models\Employee`.
  */
-class EmployeerSearch extends Employee
+class EmployeeSearch extends Employee
 {
     /**
      * @inheritdoc
