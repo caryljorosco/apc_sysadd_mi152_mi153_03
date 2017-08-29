@@ -11,7 +11,7 @@ $this->title = 'My Yii Application';
 
         <p class="lead">Please log-in to the system first to book reservations.</p>
 
-        <p><a class="btn btn-lg btn-success" href="/apc_sysadd_mi152_mi153_03/RecInt/views/site/login.php">ADMIN LOG-IN</a></p>
+        <p><a class="btn btn-lg btn-success" href="/apc_sysadd_mi152_mi153_03/RecInt/views/site/login.php	">ADMIN LOG-IN</a></p>
     </div>
 
     <div class="body-content">

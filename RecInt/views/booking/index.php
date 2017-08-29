@@ -24,11 +24,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'ID',
-            'Booking_Type',
-            'Date_Time_Received',
-            'Customer_ID',
-            'Employee_ID',
+            
+            'Booking Type',
+            'Date and Time',
+            'Customer',
+            'Employee',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

@@ -31,7 +31,7 @@ class Customer extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Last_Name', 'First_Name', 'Middle_Name', 'Contact_Number'], 'required'],
+            [['Last_Name', 'First_Name', 'Contact_Number'], 'required'],
             [['Last_Name', 'First_Name', 'Middle_Name'], 'string', 'max' => 45],
             [['Contact_Number'], 'string', 'max' => 15],
         ];
@@ -46,7 +46,6 @@ class Customer extends \yii\db\ActiveRecord
             'ID' => 'ID',
             'Last_Name' => 'Last  Name',
             'First_Name' => 'First  Name',
-            'Middle_Name' => 'Middle  Name',
             'Contact_Number' => 'Contact  Number',
         ];
     }
