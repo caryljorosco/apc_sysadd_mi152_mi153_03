@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use app\models\Services;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\BookingDetails */
@@ -13,11 +15,16 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'Booking_ID')->textInput() ?>
+	
 
     <?= $form->field($model, 'Employee_ID')->textInput() ?>
 
     <?= $form->field($model, 'Services_ID')->textInput() ?>
-
+	<?= $form->field($model, 'Services_ID')->dropDownList(
+	ArrayHelper::map(Services::find()->all(),'Services_ID','Service_Name'),
+	['prompt'=>'Select Services']
+	) ?>
+	
     <?= $form->field($model, 'RoomSchedule_ID')->textInput() ?>
 
     <div class="form-group">
