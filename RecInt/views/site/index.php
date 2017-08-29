@@ -24,7 +24,7 @@ $this->title = 'Reservation System (Asmara Spa)';
                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                     fugiat nulla pariatur.</p>
 
-                <p><?= Html::a('label', ['/customer/create'], ['class'=>'btn btn-default']) ?>Book &raquo;</a></p>
+                <p><?= Html::a('Book &raquo', ['/customer/create'], ['class'=>'btn btn-default']) ?></a></p>
             </div>
             <div class="col-lg-4">
                 <h2>View Current Bookings</h2>
