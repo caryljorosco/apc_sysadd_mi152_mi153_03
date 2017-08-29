@@ -77,7 +77,8 @@ class SiteController extends Controller
      * Login action.
      *
      * @return string
-     
+     */
+	 
     public function actionLogin()
     {
         if (!Yii::$app->user->isGuest) {
@@ -92,7 +93,7 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-	*/	
+		
 
     /**
      * Logout action.
