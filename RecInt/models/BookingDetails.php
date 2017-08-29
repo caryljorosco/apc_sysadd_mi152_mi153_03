@@ -50,9 +50,9 @@ class BookingDetails extends \yii\db\ActiveRecord
         return [
             'ID' => 'ID',
             'Booking_ID' => 'Booking  ID',
-            'Employee_ID' => 'Employee  ID',
-            'Services_ID' => 'Services  ID',
-            'Rooms_ID' => 'Rooms  ID',
+            'Employee_ID' => 'Employee ',
+            'Services_ID' => 'Services ',
+            'Rooms_ID' => 'Room',
         ];
     }
 

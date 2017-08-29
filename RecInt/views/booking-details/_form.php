@@ -11,13 +11,15 @@ use app\models\Employee;
 ?>
 
 <div class="booking-details-form">
-
+	
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'Booking_ID')->textInput() ?>
 
 	<?= $form->field($model, 'Employee_ID')->dropDownList(
-		ArrayHelper::map(Employee::find()->all(),'ID','Last_Name','Position')
+	ArrayHelper::map(Employee::find()->asArray()->all(),'ID',function($model, $defaultValue){
+			return $model['First_Name'].' '.$model['Last_Name'];}
+			,'Position')
 		)?>
 
     <?= $form->field($model, 'Services_ID')->textInput() ?>
