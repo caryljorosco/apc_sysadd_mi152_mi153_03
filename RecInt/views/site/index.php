@@ -1,5 +1,6 @@
 <?php
 use yii\helpers\Url;
+use yii\helpers\Html;
 /* @var $this yii\web\View */
 
 $this->title = 'Reservation System (Asmara Spa)';
@@ -23,7 +24,7 @@ $this->title = 'Reservation System (Asmara Spa)';
                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                     fugiat nulla pariatur.</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Book &raquo;</a></p>
+                <p><?= Html::a('label', ['/customer/create'], ['class'=>'btn btn-default']) ?>Book &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>View Current Bookings</h2>
