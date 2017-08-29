@@ -17,7 +17,7 @@ use app\models\Employee;
     <?= $form->field($model, 'Booking_ID')->textInput() ?>
 	
 	<?= $form->field($model, 'Employee_ID')->dropDownList(
-	ArrayHelper::map(Employee::find()->all(),'Employee_ID','First_Name', 'Last_Name'),
+	ArrayHelper::map(Employee::find()->all(),'empID','empFname', 'empLname'),
 	['prompt'=>'Select Employee']
 	) ?>
     
