@@ -59,3 +59,5 @@ VALUES
 ('Mansfield', 'Jaymes', 'June', '09860123147'),
 ('Estranja', 'Laganja', 'Jay', '09563458789'),
 ('Delano', 'Adore', 'Maximo', '09886433217'),
+('Blac', 'Kimora', 'Asya', '09331256410'),
+('Aquaria', 'Aja', 'Alinna', '09887564125'),
