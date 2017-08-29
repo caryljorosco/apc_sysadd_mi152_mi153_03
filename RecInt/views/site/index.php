@@ -10,11 +10,6 @@ $this->title = 'Reservation System (Asmara Spa)';
         <h1>Welcome!</h1>
 
         <p class="lead">Asmara Spa Reservation System</p>
-
-<<<<<<< HEAD
-=======
-        <p><a class="btn btn-lg btn-success" href="/apc_sysadd_mi152_mi153_03/RecInt/views/site/login.php	">ADMIN LOG-IN</a></p>
->>>>>>> fb1d5ba7da9e8dd8b22628491bcab177c64043ef
     </div>
 
     <div class="body-content">
