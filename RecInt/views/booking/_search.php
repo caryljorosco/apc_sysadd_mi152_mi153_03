@@ -15,15 +15,23 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'ID') ?>
+    <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'Booking_Type') ?>
+    <?= $form->field($model, 'booking_type') ?>
 
-    <?= $form->field($model, 'Date_Time_Received') ?>
+    <?= $form->field($model, 'date') ?>
 
-    <?= $form->field($model, 'Customer_ID') ?>
+    <?= $form->field($model, 'time_start') ?>
 
-    <?= $form->field($model, 'Employee_ID') ?>
+    <?= $form->field($model, 'time_end') ?>
+
+    <?php // echo $form->field($model, 'duration') ?>
+
+    <?php // echo $form->field($model, 'customer_id') ?>
+
+    <?php // echo $form->field($model, 'employee_id') ?>
+
+    <?php // echo $form->field($model, 'rooms_id') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

@@ -10,9 +10,9 @@ use Yii;
  * @property integer $id
  * @property integer $room_num
  *
- * @property ServiceBooking[] $serviceBookings
+ * @property Booking[] $bookings
  */
-class rooms extends \yii\db\ActiveRecord
+class Rooms extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -47,8 +47,8 @@ class rooms extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getServiceBookings()
+    public function getBookings()
     {
-        return $this->hasMany(ServiceBooking::className(), ['rooms_id' => 'id']);
+        return $this->hasMany(Booking::className(), ['rooms_id' => 'id']);
     }
 }

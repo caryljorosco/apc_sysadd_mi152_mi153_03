@@ -12,13 +12,11 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'Service_Name')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'ID')->textInput() ?>
 
-    <?= $form->field($model, 'Description')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'srvc_name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'Duration')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'Price')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'srvc_price')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

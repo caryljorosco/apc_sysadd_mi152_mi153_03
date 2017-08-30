@@ -29,10 +29,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'ID',
-            'Service_Name',
-            'Description',
-            'Duration',
-            'Price',
+            'srvc_name',
+            'srvc_price',
         ],
     ]) ?>
 

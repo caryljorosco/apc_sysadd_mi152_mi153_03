@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Booking */
 
-$this->title = $model->ID;
+$this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Bookings', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -15,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->ID], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->ID], [
+        <?= Html::a('Update', ['update', 'id' => $model->id, 'customer_id' => $model->customer_id, 'employee_id' => $model->employee_id, 'rooms_id' => $model->rooms_id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id' => $model->id, 'customer_id' => $model->customer_id, 'employee_id' => $model->employee_id, 'rooms_id' => $model->rooms_id], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -28,11 +28,15 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'ID',
-            'Booking_Type',
-            'Date_Time_Received',
-            'Customer_ID',
-            'Employee_ID',
+            'id',
+            'booking_type',
+            'date',
+            'time_start',
+            'time_end',
+            'duration',
+            'customer_id',
+            'employee_id',
+            'rooms_id',
         ],
     ]) ?>
 

@@ -12,13 +12,23 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'Booking_Type')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'id')->textInput() ?>
 
-    <?= $form->field($model, 'Date_Time_Received')->textInput() ?>
+    <?= $form->field($model, 'booking_type')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'Customer_ID')->textInput() ?>
+    <?= $form->field($model, 'date')->textInput() ?>
 
-    <?= $form->field($model, 'Employee_ID')->textInput() ?>
+    <?= $form->field($model, 'time_start')->textInput() ?>
+
+    <?= $form->field($model, 'time_end')->textInput() ?>
+
+    <?= $form->field($model, 'duration')->textInput() ?>
+
+    <?= $form->field($model, 'customer_id')->textInput() ?>
+
+    <?= $form->field($model, 'employee_id')->textInput() ?>
+
+    <?= $form->field($model, 'rooms_id')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

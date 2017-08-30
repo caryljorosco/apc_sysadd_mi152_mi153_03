@@ -12,10 +12,10 @@ use Yii;
  * @property string $emp_lname
  * @property string $emp_position
  *
- * @property ServiceBooking[] $serviceBookings
- * @property ServiceDetails[] $serviceDetails
+ * @property Booking[] $bookings
+ * @property BookingDetails[] $bookingDetails
  */
-class employee extends \yii\db\ActiveRecord
+class Employee extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -53,16 +53,16 @@ class employee extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getServiceBookings()
+    public function getBookings()
     {
-        return $this->hasMany(ServiceBooking::className(), ['employee_id' => 'id']);
+        return $this->hasMany(Booking::className(), ['employee_id' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getServiceDetails()
+    public function getBookingDetails()
     {
-        return $this->hasMany(ServiceDetails::className(), ['employee_id' => 'id']);
+        return $this->hasMany(BookingDetails::className(), ['employee_id' => 'id']);
     }
 }

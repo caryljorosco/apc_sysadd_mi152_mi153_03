@@ -11,9 +11,9 @@ use Yii;
  * @property string $srvc_name
  * @property string $srvc_price
  *
- * @property ServiceDetails[] $serviceDetails
+ * @property BookingDetails[] $bookingDetails
  */
-class services extends \yii\db\ActiveRecord
+class Services extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -51,8 +51,8 @@ class services extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getServiceDetails()
+    public function getBookingDetails()
     {
-        return $this->hasMany(ServiceDetails::className(), ['services_ID' => 'ID']);
+        return $this->hasMany(BookingDetails::className(), ['services_ID' => 'ID']);
     }
 }

@@ -18,8 +18,8 @@ class BookingSearch extends Booking
     public function rules()
     {
         return [
-            [['ID', 'Customer_ID', 'Employee_ID'], 'integer'],
-            [['Booking_Type', 'Date_Time_Received'], 'safe'],
+            [['id', 'customer_id', 'employee_id', 'rooms_id'], 'integer'],
+            [['booking_type', 'date', 'time_start', 'time_end', 'duration'], 'safe'],
         ];
     }
 
@@ -59,13 +59,17 @@ class BookingSearch extends Booking
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'ID' => $this->ID,
-            'Date_Time_Received' => $this->Date_Time_Received,
-            'Customer_ID' => $this->Customer_ID,
-            'Employee_ID' => $this->Employee_ID,
+            'id' => $this->id,
+            'date' => $this->date,
+            'time_start' => $this->time_start,
+            'time_end' => $this->time_end,
+            'duration' => $this->duration,
+            'customer_id' => $this->customer_id,
+            'employee_id' => $this->employee_id,
+            'rooms_id' => $this->rooms_id,
         ]);
 
-        $query->andFilterWhere(['like', 'Booking_Type', $this->Booking_Type]);
+        $query->andFilterWhere(['like', 'booking_type', $this->booking_type]);
 
         return $dataProvider;
     }

@@ -5,9 +5,9 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Booking */
 
-$this->title = 'Update Booking: ' . $model->ID;
+$this->title = 'Update Booking: ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Bookings', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->ID, 'url' => ['view', 'id' => $model->ID]];
+$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id, 'customer_id' => $model->customer_id, 'employee_id' => $model->employee_id, 'rooms_id' => $model->rooms_id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="booking-update">

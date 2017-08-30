@@ -7,11 +7,10 @@ use Yii;
 /**
  * This is the model class for table "customer".
  *
- * @property integer $ID
- * @property string $Last_Name
- * @property string $First_Name
- * @property string $Middle_Name
- * @property string $Contact_Number
+ * @property integer $id
+ * @property string $cus_fname
+ * @property string $cus_lname
+ * @property string $cus_co
  *
  * @property Booking[] $bookings
  */
@@ -31,9 +30,10 @@ class Customer extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Last_Name', 'First_Name', 'Middle_Name', 'Contact_Number'], 'required'],
-            [['Last_Name', 'First_Name', 'Middle_Name'], 'string', 'max' => 45],
-            [['Contact_Number'], 'string', 'max' => 15],
+            [['id', 'cus_fname', 'cus_lname', 'cus_co'], 'required'],
+            [['id'], 'integer'],
+            [['cus_fname', 'cus_lname'], 'string', 'max' => 45],
+            [['cus_co'], 'string', 'max' => 15],
         ];
     }
 
@@ -43,11 +43,10 @@ class Customer extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ID' => 'ID',
-            'Last_Name' => 'Last  Name',
-            'First_Name' => 'First  Name',
-            'Middle_Name' => 'Middle  Name',
-            'Contact_Number' => 'Contact  Number',
+            'id' => 'ID',
+            'cus_fname' => 'Cus Fname',
+            'cus_lname' => 'Cus Lname',
+            'cus_co' => 'Cus Co',
         ];
     }
 
@@ -56,6 +55,6 @@ class Customer extends \yii\db\ActiveRecord
      */
     public function getBookings()
     {
-        return $this->hasMany(Booking::className(), ['Customer_ID' => 'ID']);
+        return $this->hasMany(Booking::className(), ['customer_id' => 'id']);
     }
 }
