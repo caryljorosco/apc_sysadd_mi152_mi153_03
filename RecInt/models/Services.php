@@ -8,14 +8,12 @@ use Yii;
  * This is the model class for table "services".
  *
  * @property integer $ID
- * @property string $Service_Name
- * @property string $Description
- * @property string $Duration
- * @property string $Price
+ * @property string $srvc_name
+ * @property string $srvc_price
  *
- * @property BookingDetails[] $bookingDetails
+ * @property ServiceDetails[] $serviceDetails
  */
-class Services extends \yii\db\ActiveRecord
+class services extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -31,10 +29,10 @@ class Services extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Service_Name', 'Duration', 'Price'], 'required'],
-            [['Price'], 'number'],
-            [['Service_Name', 'Duration'], 'string', 'max' => 45],
-            [['Description'], 'string', 'max' => 200],
+            [['ID', 'srvc_name', 'srvc_price'], 'required'],
+            [['ID'], 'integer'],
+            [['srvc_price'], 'number'],
+            [['srvc_name'], 'string', 'max' => 45],
         ];
     }
 
@@ -45,18 +43,16 @@ class Services extends \yii\db\ActiveRecord
     {
         return [
             'ID' => 'ID',
-            'Service_Name' => 'Service  Name',
-            'Description' => 'Description',
-            'Duration' => 'Duration',
-            'Price' => 'Price',
+            'srvc_name' => 'Srvc Name',
+            'srvc_price' => 'Srvc Price',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getBookingDetails()
+    public function getServiceDetails()
     {
-        return $this->hasMany(BookingDetails::className(), ['Services_ID' => 'ID']);
+        return $this->hasMany(ServiceDetails::className(), ['services_ID' => 'ID']);
     }
 }
