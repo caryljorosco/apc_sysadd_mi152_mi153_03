@@ -35,8 +35,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'date_received',
             'duration',
             'Rooms_ID',
-            'Customer_ID',
-            'Employee_ID',
+            'CustomerName',
+            'EmployeeName',
         ],
     ]) ?>
 

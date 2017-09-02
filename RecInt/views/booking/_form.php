@@ -4,6 +4,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use kartik\date\DatePicker;
 use kartik\time\TimePicker;
+use yii\helpers\ArrayHelper;
+use app\models\Employee;
+use app\models\Services;
+use app\models\Rooms;
+use app\models\Customer;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Booking */
@@ -19,23 +24,36 @@ use kartik\time\TimePicker;
 	<?= $form->field($model, 'Booking_Type')->radio(['label' => 'Hotel Guest', 'value' => 'Guest', 'uncheck' => null]) ?>
     
 	<?= $form->field($model, 'time_start')->widget(\kartik\time\TimePicker::classname())?>
-	<?= $form->field($model, 'time_end')->widget(\kartik\time\TimePicker::classname())?>
 	
+	<?= $form->field($model, 'time_end')->widget(\kartik\time\TimePicker::classname(),[
+	'pluginOptions' => [
+		'showMeridian' => true,
+		'showInput' => false
+		]
+	])?>
 	<?= $form->field($model, 'date_received')->widget(\kartik\date\DatePicker::classname(),[
     'pluginOptions' => [
         'autoclose'=>true,
-		'format' => 'yyyy-mm-dd'
-    ]
-])?>
+		'format' => 'yyyy-MM-dd'
+		]
+	])?>
 
     <?= $form->field($model, 'duration')->dropDownList(['a' => '01:00:00', 'b' => '01:30:00', 'c' => '02:00:00']); ?>
 
-    <?= $form->field($model, 'Rooms_ID')->textInput() ?>
-
-    <?= $form->field($model, 'Customer_ID')->textInput() ?>
-
-    <?= $form->field($model, 'Employee_ID')->textInput() ?>
-
+	<?= $form->field($model, 'Rooms_ID')->dropDownList(
+	ArrayHelper::map(Rooms::find()->all(),'ID','Room_Number'))?>
+	
+	<?= $form->field($model, 'Customer_ID')->dropDownList(
+	ArrayHelper::map(Customer::find()->asArray()->all(), 'ID',function($model, $defaultValue){
+			return $model['First_Name'].' '.$model['Last_Name'];}
+			,'Position')
+		)?>
+		
+	<?= $form->field($model, 'Employee_ID')->dropDownList(
+	ArrayHelper::map(Employee::find()->asArray()->all(), 'ID',function($model, $defaultValue){
+			return $model['First_Name'].' '.$model['Last_Name'];}
+			,'Position')
+		)?>
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

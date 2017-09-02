@@ -73,7 +73,7 @@ class Booking extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Rooms::className(), ['ID' => 'Rooms_ID']);
     }
-
+	
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -81,7 +81,10 @@ class Booking extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Customer::className(), ['ID' => 'Customer_ID']);
     }
-
+	public function getCustomerName()
+	{
+		return $this->customer->First_Name.' '. $this->customer->Last_Name;
+	}
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -89,6 +92,10 @@ class Booking extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Employee::className(), ['ID' => 'Employee_ID']);
     }
+	public function getEmployeeName()
+	{
+		return $this->employee->First_Name.' '. $this->employee->Last_Name;
+	}
 
     /**
      * @return \yii\db\ActiveQuery
