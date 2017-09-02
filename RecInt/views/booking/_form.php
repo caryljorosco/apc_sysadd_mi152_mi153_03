@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use kartik\date\DatePicker;
+use kartik\time\TimePicker;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Booking */
@@ -12,13 +14,19 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-	<?= $form->field($model, 'Booking_Type')->dropDownList(['a' => 'Online', 'b' => 'Walk In', 'c' => 'Hotel Guest']); ?>
 	
-    <?= $form->field($model, 'time_start')->textInput() ?>
-
-    <?= $form->field($model, 'time_end')->textInput() ?>
-
-    <?= $form->field($model, 'date_received')->textInput() ?>
+	<?= $form->field($model, 'Booking_Type')->radio(['label' => 'Walk In', 'value' => 'Walk In', 'uncheck' => null]) ?>
+	<?= $form->field($model, 'Booking_Type')->radio(['label' => 'Hotel Guest', 'value' => 'Guest', 'uncheck' => null]) ?>
+    
+	<?= $form->field($model, 'time_start')->widget(\kartik\time\TimePicker::classname())?>
+	<?= $form->field($model, 'time_end')->widget(\kartik\time\TimePicker::classname())?>
+	
+	<?= $form->field($model, 'date_received')->widget(\kartik\date\DatePicker::classname(),[
+    'pluginOptions' => [
+        'autoclose'=>true,
+		'format' => 'yyyy-mm-dd'
+    ]
+])?>
 
     <?= $form->field($model, 'duration')->dropDownList(['a' => '01:00:00', 'b' => '01:30:00', 'c' => '02:00:00']); ?>
 

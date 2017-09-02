@@ -39,7 +39,7 @@ class Booking extends \yii\db\ActiveRecord
     {
         return [
             [['Booking_Type', 'time_start', 'time_end', 'date_received', 'duration'], 'required'],
-            [['time_start', 'time_end', 'date_received', 'duration'], 'safe'],
+            [['time_start', 'time_end','date_received', 'duration'], 'safe'],
             [['Rooms_ID', 'Customer_ID', 'Employee_ID'], 'integer'],
             [['Booking_Type'], 'string', 'max' => 15],
             [['Rooms_ID'], 'exist', 'skipOnError' => true, 'targetClass' => Rooms::className(), 'targetAttribute' => ['Rooms_ID' => 'ID']],
