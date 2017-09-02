@@ -12,15 +12,15 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'Booking_Type')->textInput(['maxlength' => true]) ?>
-
+	<?= $form->field($model, 'Booking_Type')->dropDownList(['a' => 'Online', 'b' => 'Walk In', 'c' => 'Hotel Guest']); ?>
+	
     <?= $form->field($model, 'time_start')->textInput() ?>
 
     <?= $form->field($model, 'time_end')->textInput() ?>
 
     <?= $form->field($model, 'date_received')->textInput() ?>
 
-    <?= $form->field($model, 'duration')->textInput() ?>
+    <?= $form->field($model, 'duration')->dropDownList(['a' => '01:00:00', 'b' => '01:30:00', 'c' => '02:00:00']); ?>
 
     <?= $form->field($model, 'Rooms_ID')->textInput() ?>
 

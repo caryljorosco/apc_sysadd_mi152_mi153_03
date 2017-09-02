@@ -18,6 +18,7 @@ use app\models\Rooms;
 
     <?= $form->field($model, 'Booking_ID')->textInput() ?>
 
+			
 	<?= $form->field($model, 'Employee_ID')->dropDownList(
 	ArrayHelper::map(Employee::find()->asArray()->all(), 'ID',function($model, $defaultValue){
 			return $model['First_Name'].' '.$model['Last_Name'];}
@@ -27,8 +28,6 @@ use app\models\Rooms;
 	<?= $form->field($model, 'Services_ID')->dropDownList(
 	ArrayHelper::map(Services::find()->all(),'ID','Service_Name','Price'))?>
 	
-	<?= $form->field($model, 'Rooms_ID')->dropDownList(
-	ArrayHelper::map(Rooms::find()->all(),'ID','Room_Number'))?>
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

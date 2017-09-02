@@ -32,7 +32,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'Booking_ID',
             'Employee_ID',
             'Services_ID',
-            'Rooms_ID',
         ],
     ]) ?>
 
