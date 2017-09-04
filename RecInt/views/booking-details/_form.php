@@ -6,6 +6,9 @@ use yii\helpers\ArrayHelper;
 use app\models\Employee;
 use app\models\Services;
 use app\models\Rooms;
+use app\models\BookingDetails;
+use app\models\Customer;
+use app\models\Booking;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\BookingDetails */
@@ -16,8 +19,9 @@ use app\models\Rooms;
 	
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'Booking_ID')->textInput() ?>
-
+	<?= $form->field($model, 'Booking_ID')->dropDownList(
+		ArrayHelper::map(Booking::find()->joinWith('customer')->all(), 
+		'ID','customer.Last_Name','Booking_Type'))?>
 			
 	<?= $form->field($model, 'Employee_ID')->dropDownList(
 	ArrayHelper::map(Employee::find()->asArray()->all(), 'ID',function($model, $defaultValue){

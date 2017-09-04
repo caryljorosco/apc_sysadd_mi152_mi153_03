@@ -4,7 +4,7 @@ namespace app\models;
 
 use Yii;
 
-class merge
+class Merge
 {
 	
 public function getBooking()

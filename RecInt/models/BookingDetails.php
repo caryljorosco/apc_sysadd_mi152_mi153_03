@@ -23,7 +23,8 @@ class BookingDetails extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'booking_details';
+		return 'booking_details';
+		
     }
 
     /**
@@ -46,20 +47,23 @@ class BookingDetails extends \yii\db\ActiveRecord
     {
         return [
             'ID' => 'ID',
-            'Booking_ID' => 'Booking  ID',
-            'Employee_ID' => 'Employee  ID',
-            'Services_ID' => 'Services  ID',
+            'Booking_ID' => 'Booking Customer',
+            'Employee_ID' => 'Employee',
+            'Services_ID' => 'Services',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getBooking()
-    {
-        return $this->hasOne(Booking::className(), ['ID' => 'Booking_ID']);
-    }
-
+   
+	public function getBooking()
+	{
+		return $this->hasOne(Booking::className(), ['ID' => 'Booking_ID']);
+	}
+	
+	
+	
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -67,7 +71,11 @@ class BookingDetails extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Employee::className(), ['ID' => 'Employee_ID']);
     }
-
+	 
+	public function getEmployeeName()
+    {
+        return $this->employee->First_Name.' '. $this->employee->Last_Name;
+    }
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -75,6 +83,12 @@ class BookingDetails extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Services::className(), ['ID' => 'Services_ID']);
     }
+	
+	public function getServicesName()
+	{
+		return $this->services->Service_Name;
+	}
+	
 	
 	
 }

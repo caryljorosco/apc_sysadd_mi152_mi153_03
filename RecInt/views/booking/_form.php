@@ -20,26 +20,38 @@ use app\models\Customer;
     <?php $form = ActiveForm::begin(); ?>
 
 	
-	<?= $form->field($model, 'Booking_Type')->radio(['label' => 'Walk In', 'value' => 'Walk In', 'uncheck' => null]) ?>
-	<?= $form->field($model, 'Booking_Type')->radio(['label' => 'Hotel Guest', 'value' => 'Guest', 'uncheck' => null]) ?>
+	<?= $form->field($model, 'Booking_Type')->radioList([
+	'1' => 'Walk In',
+	'2' => 'Hotel Guest']) ?>
+ 
     
-	<?= $form->field($model, 'time_start')->widget(\kartik\time\TimePicker::classname())?>
+	<?= $form->field($model, 'time_start')->widget(\kartik\time\TimePicker::classname(),[
+	'pluginOptions' => [
+		'showMeridian' => false,
+		'defaultTime' => 'current',
+		'showSeconds' => true
+		]
+	])?>
 	
 	<?= $form->field($model, 'time_end')->widget(\kartik\time\TimePicker::classname(),[
 	'pluginOptions' => [
-		'showMeridian' => true,
-		'showInput' => false
+		'showMeridian' => false,
+		'showSeconds' => true
 		]
 	])?>
 	<?= $form->field($model, 'date_received')->widget(\kartik\date\DatePicker::classname(),[
     'pluginOptions' => [
         'autoclose'=>true,
-		'format' => 'yyyy-MM-dd'
+		'format' => 'yyyy-mm-dd'
 		]
 	])?>
 
-    <?= $form->field($model, 'duration')->dropDownList(['a' => '01:00:00', 'b' => '01:30:00', 'c' => '02:00:00']); ?>
-
+    <?= $form->field($model, 'duration')->widget(\kartik\time\TimePicker::classname(),[
+	'pluginOptions' => [
+		'showMeridian' => false,
+		'defaultTime' => '01:00'
+		]
+	])?>
 	<?= $form->field($model, 'Rooms_ID')->dropDownList(
 	ArrayHelper::map(Rooms::find()->all(),'ID','Room_Number'))?>
 	

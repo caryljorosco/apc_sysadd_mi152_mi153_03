@@ -104,4 +104,6 @@ class Booking extends \yii\db\ActiveRecord
     {
         return $this->hasMany(BookingDetails::className(), ['Booking_ID' => 'ID']);
     }
+	
+	
 }
