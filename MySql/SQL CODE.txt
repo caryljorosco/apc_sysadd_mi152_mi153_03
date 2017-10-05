@@ -1,0 +1,110 @@
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+USE `mydb` ;
+
+
+CREATE TABLE IF NOT EXISTS `mydb`.`customer` (
+  `id` INT NOT NULL,
+  `cus_fname` VARCHAR(45) NOT NULL,
+  `cus_lname` VARCHAR(45) NOT NULL,
+  `cus_contact_number` VARCHAR(15) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+
+CREATE TABLE IF NOT EXISTS `mydb`.`rooms` (
+  `id` INT NOT NULL,
+  `room_num` INT NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+
+CREATE TABLE IF NOT EXISTS `mydb`.`employee` (
+  `id` INT NOT NULL,
+  `emp_fname` VARCHAR(45) NOT NULL,
+  `emp_lname` VARCHAR(45) NOT NULL,
+  `emp_position` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+
+CREATE TABLE IF NOT EXISTS `mydb`.`service_booking` (
+  `id` INT NOT NULL,
+  `customer_id` INT NOT NULL,
+  `employee_id` INT NOT NULL,
+  PRIMARY KEY (`id`, `customer_id`, `employee_id`),
+  INDEX `fk_service_booking_customer_idx` (`customer_id` ASC),
+  INDEX `fk_service_booking_employee1_idx` (`employee_id` ASC),
+  CONSTRAINT `fk_service_booking_customer`
+    FOREIGN KEY (`customer_id`)
+    REFERENCES `mydb`.`customer` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_service_booking_employee1`
+    FOREIGN KEY (`employee_id`)
+    REFERENCES `mydb`.`employee` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+
+CREATE TABLE IF NOT EXISTS `mydb`.`services` (
+  `ID` INT NOT NULL,
+  `srvc_name` VARCHAR(45) NOT NULL,
+  `srvc_duration` TIME(0) NOT NULL,
+  `srvc_price` DECIMAL(2) NOT NULL,
+  PRIMARY KEY (`ID`))
+ENGINE = InnoDB;
+
+
+
+CREATE TABLE IF NOT EXISTS `mydb`.`service_details` (
+  `id` INT NOT NULL,
+  `employee_id` INT NOT NULL,
+  `services_ID` INT NOT NULL,
+  `rooms_id` INT NOT NULL,
+  `date` DATE NOT NULL,
+  `time_started` TIME(0) NOT NULL,
+  `time_ended` TIME(0) NOT NULL,
+  `booking_type` VARCHAR(45) NOT NULL,
+  `service_booking_id` INT NOT NULL,
+  PRIMARY KEY (`id`, `employee_id`, `services_ID`, `rooms_id`, `service_booking_id`),
+  INDEX `fk_service_details_employee1_idx` (`employee_id` ASC),
+  INDEX `fk_service_details_services1_idx` (`services_ID` ASC),
+  INDEX `fk_service_details_rooms1_idx` (`rooms_id` ASC),
+  INDEX `fk_service_details_service_booking1_idx` (`service_booking_id` ASC),
+  CONSTRAINT `fk_service_details_employee1`
+    FOREIGN KEY (`employee_id`)
+    REFERENCES `mydb`.`employee` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_service_details_services1`
+    FOREIGN KEY (`services_ID`)
+    REFERENCES `mydb`.`services` (`ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_service_details_rooms1`
+    FOREIGN KEY (`rooms_id`)
+    REFERENCES `mydb`.`rooms` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_service_details_service_booking1`
+    FOREIGN KEY (`service_booking_id`)
+    REFERENCES `mydb`.`service_booking` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
