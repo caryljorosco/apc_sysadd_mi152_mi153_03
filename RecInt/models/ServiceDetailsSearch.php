@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\BookingDetails;
+use app\models\ServiceDetails;
 
 /**
- * BookingDetailsSearch represents the model behind the search form about `app\models\BookingDetails`.
+ * ServiceDetailsSearch represents the model behind the search form about `app\models\ServiceDetails`.
  */
-class BookingDetailsSearch extends BookingDetails
+class ServiceDetailsSearch extends ServiceDetails
 {
     /**
      * @inheritdoc
@@ -18,7 +18,8 @@ class BookingDetailsSearch extends BookingDetails
     public function rules()
     {
         return [
-            [['ID', 'Booking_ID', 'Employee_ID', 'Services_ID'], 'integer'],
+            [['id', 'employee_id', 'services_ID', 'rooms_id', 'service_booking_id'], 'integer'],
+            [['date', 'time_started', 'time_ended', 'booking_type'], 'safe'],
         ];
     }
 
@@ -40,7 +41,7 @@ class BookingDetailsSearch extends BookingDetails
      */
     public function search($params)
     {
-        $query = BookingDetails::find();
+        $query = ServiceDetails::find();
 
         // add conditions that should always apply here
 
@@ -58,11 +59,17 @@ class BookingDetailsSearch extends BookingDetails
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'ID' => $this->ID,
-            'Booking_ID' => $this->Booking_ID,
-            'Employee_ID' => $this->Employee_ID,
-            'Services_ID' => $this->Services_ID,
+            'id' => $this->id,
+            'employee_id' => $this->employee_id,
+            'services_ID' => $this->services_ID,
+            'rooms_id' => $this->rooms_id,
+            'date' => $this->date,
+            'time_started' => $this->time_started,
+            'time_ended' => $this->time_ended,
+            'service_booking_id' => $this->service_booking_id,
         ]);
+
+        $query->andFilterWhere(['like', 'booking_type', $this->booking_type]);
 
         return $dataProvider;
     }

@@ -3,16 +3,16 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Booking;
-use app\models\BookingSearch;
+use app\models\ServiceBooking;
+use app\models\ServiceBookingSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * BookingController implements the CRUD actions for Booking model.
+ * ServiceBookingController implements the CRUD actions for ServiceBooking model.
  */
-class BookingController extends Controller
+class ServiceBookingController extends Controller
 {
     /**
      * @inheritdoc
@@ -30,12 +30,12 @@ class BookingController extends Controller
     }
 
     /**
-     * Lists all Booking models.
+     * Lists all ServiceBooking models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new BookingSearch();
+        $searchModel = new ServiceBookingSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,28 +45,30 @@ class BookingController extends Controller
     }
 
     /**
-     * Displays a single Booking model.
+     * Displays a single ServiceBooking model.
      * @param integer $id
+     * @param integer $customer_id
+     * @param integer $employee_id
      * @return mixed
      */
-    public function actionView($id)
+    public function actionView($id, $customer_id, $employee_id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $this->findModel($id, $customer_id, $employee_id),
         ]);
     }
 
     /**
-     * Creates a new Booking model.
+     * Creates a new ServiceBooking model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Booking();
+        $model = new ServiceBooking();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->ID]);
+            return $this->redirect(['view', 'id' => $model->id, 'customer_id' => $model->customer_id, 'employee_id' => $model->employee_id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -75,17 +77,19 @@ class BookingController extends Controller
     }
 
     /**
-     * Updates an existing Booking model.
+     * Updates an existing ServiceBooking model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
+     * @param integer $customer_id
+     * @param integer $employee_id
      * @return mixed
      */
-    public function actionUpdate($id)
+    public function actionUpdate($id, $customer_id, $employee_id)
     {
-        $model = $this->findModel($id);
+        $model = $this->findModel($id, $customer_id, $employee_id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->ID]);
+            return $this->redirect(['view', 'id' => $model->id, 'customer_id' => $model->customer_id, 'employee_id' => $model->employee_id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -94,28 +98,32 @@ class BookingController extends Controller
     }
 
     /**
-     * Deletes an existing Booking model.
+     * Deletes an existing ServiceBooking model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
+     * @param integer $customer_id
+     * @param integer $employee_id
      * @return mixed
      */
-    public function actionDelete($id)
+    public function actionDelete($id, $customer_id, $employee_id)
     {
-        $this->findModel($id)->delete();
+        $this->findModel($id, $customer_id, $employee_id)->delete();
 
         return $this->redirect(['index']);
     }
 
     /**
-     * Finds the Booking model based on its primary key value.
+     * Finds the ServiceBooking model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Booking the loaded model
+     * @param integer $customer_id
+     * @param integer $employee_id
+     * @return ServiceBooking the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id)
+    protected function findModel($id, $customer_id, $employee_id)
     {
-        if (($model = Booking::findOne($id)) !== null) {
+        if (($model = ServiceBooking::findOne(['id' => $id, 'customer_id' => $customer_id, 'employee_id' => $employee_id])) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

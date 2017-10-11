@@ -7,12 +7,12 @@ use Yii;
 /**
  * This is the model class for table "customer".
  *
- * @property integer $ID
- * @property string $Last_Name
- * @property string $First_Name
- * @property string $Contact_Number
+ * @property integer $id
+ * @property string $cus_fname
+ * @property string $cus_lname
+ * @property string $cus_contact_number
  *
- * @property Booking[] $bookings
+ * @property ServiceBooking[] $serviceBookings
  */
 class Customer extends \yii\db\ActiveRecord
 {
@@ -30,9 +30,9 @@ class Customer extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Last_Name', 'First_Name', 'Contact_Number'], 'required'],
-            [['Last_Name', 'First_Name'], 'string', 'max' => 45],
-            [['Contact_Number'], 'string', 'max' => 15],
+            [['cus_fname', 'cus_lname', 'cus_contact_number'], 'required'],
+            [['cus_fname', 'cus_lname'], 'string', 'max' => 45],
+            [['cus_contact_number'], 'string', 'max' => 15],
         ];
     }
 
@@ -42,18 +42,18 @@ class Customer extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            
-            'Last_Name' => 'Last  Name',
-            'First_Name' => 'First  Name',
-            'Contact_Number' => 'Contact  Number',
+            'id' => 'ID',
+            'cus_fname' => 'Firstname',
+            'cus_lname' => 'Lastname',
+            'cus_contact_number' => 'Contact Number',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getBookings()
+    public function getServiceBookings()
     {
-        return $this->hasMany(Booking::className(), ['Customer_ID' => 'ID']);
+        return $this->hasMany(ServiceBooking::className(), ['customer_id' => 'id']);
     }
 }

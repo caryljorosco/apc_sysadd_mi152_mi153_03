@@ -7,11 +7,10 @@ use Yii;
 /**
  * This is the model class for table "rooms".
  *
- * @property integer $ID
- * @property string $Room_Number
+ * @property integer $id
+ * @property integer $room_num
  *
- * @property Booking[] $bookings
- * @property BookingDetails[] $bookingDetails
+ * @property ServiceDetails[] $serviceDetails
  */
 class Rooms extends \yii\db\ActiveRecord
 {
@@ -29,8 +28,8 @@ class Rooms extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Room_Number'], 'required'],
-            [['Room_Number'], 'string', 'max' => 2],
+            [['room_num'], 'required'],
+            [['room_num'], 'integer'],
         ];
     }
 
@@ -40,24 +39,16 @@ class Rooms extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ID' => 'ID',
-            'Room_Number' => 'Room  Number',
+            'id' => 'ID',
+            'room_num' => 'Room Number',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getBookings()
+    public function getServiceDetails()
     {
-        return $this->hasMany(Booking::className(), ['Rooms_ID' => 'ID']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getBookingDetails()
-    {
-        return $this->hasMany(BookingDetails::className(), ['Rooms_ID' => 'ID']);
+        return $this->hasMany(ServiceDetails::className(), ['rooms_id' => 'id']);
     }
 }
