@@ -35,14 +35,19 @@ use app\models\Customer;
 	
     <?= $form->field($model, 'date')->widget(\kartik\date\DatePicker::classname(),[
     'pluginOptions' => [
+		'type'=> DatePicker::TYPE_INLINE,
         'autoclose'=>true,
 		'format' => 'yyyy-mm-dd',
-		'defaultDate' => 'current'
+		'defaultDate' => 'current',
+		'todayHighlight'=>true
 		]
 	])?>
+	
+	
 
 	<?= $form->field($model, 'time_started')->widget(\kartik\time\TimePicker::classname(),[
 	'pluginOptions' => [
+	
 		'showMeridian' => false,
 		'defaultTime' => 'current',
 		'showSeconds' => true
