@@ -18,8 +18,8 @@ class EmployeeSearch extends Employee
     public function rules()
     {
         return [
-            [['ID'], 'integer'],
-            [['Last_Name', 'First_Name', 'Position'], 'safe'],
+            [['id'], 'integer'],
+            [['emp_fname', 'emp_lname', 'emp_position'], 'safe'],
         ];
     }
 
@@ -59,12 +59,12 @@ class EmployeeSearch extends Employee
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'ID' => $this->ID,
+            'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'Last_Name', $this->Last_Name])
-            ->andFilterWhere(['like', 'First_Name', $this->First_Name])
-            ->andFilterWhere(['like', 'Position', $this->Position]);
+        $query->andFilterWhere(['like', 'emp_fname', $this->emp_fname])
+            ->andFilterWhere(['like', 'emp_lname', $this->emp_lname])
+            ->andFilterWhere(['like', 'emp_position', $this->emp_position]);
 
         return $dataProvider;
     }

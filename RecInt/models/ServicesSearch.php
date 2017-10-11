@@ -19,8 +19,8 @@ class ServicesSearch extends Services
     {
         return [
             [['ID'], 'integer'],
-            [['Service_Name'], 'safe'],
-            [['Price'], 'number'],
+            [['srvc_name', 'srvc_duration'], 'safe'],
+            [['srvc_price'], 'number'],
         ];
     }
 
@@ -61,10 +61,11 @@ class ServicesSearch extends Services
         // grid filtering conditions
         $query->andFilterWhere([
             'ID' => $this->ID,
-            'Price' => $this->Price,
+            'srvc_duration' => $this->srvc_duration,
+            'srvc_price' => $this->srvc_price,
         ]);
 
-        $query->andFilterWhere(['like', 'Service_Name', $this->Service_Name]);
+        $query->andFilterWhere(['like', 'srvc_name', $this->srvc_name]);
 
         return $dataProvider;
     }

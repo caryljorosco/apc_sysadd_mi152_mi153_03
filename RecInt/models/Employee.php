@@ -7,13 +7,13 @@ use Yii;
 /**
  * This is the model class for table "employee".
  *
- * @property integer $ID
- * @property string $Last_Name
- * @property string $First_Name
- * @property string $Position
+ * @property integer $id
+ * @property string $emp_fname
+ * @property string $emp_lname
+ * @property string $emp_position
  *
- * @property Booking[] $bookings
- * @property BookingDetails[] $bookingDetails
+ * @property ServiceBooking[] $serviceBookings
+ * @property ServiceDetails[] $serviceDetails
  */
 class Employee extends \yii\db\ActiveRecord
 {
@@ -31,8 +31,8 @@ class Employee extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Last_Name', 'First_Name', 'Position'], 'required'],
-            [['Last_Name', 'First_Name', 'Position'], 'string', 'max' => 45],
+            [['emp_fname', 'emp_lname', 'emp_position'], 'required'],
+            [['emp_fname', 'emp_lname', 'emp_position'], 'string', 'max' => 45],
         ];
     }
 
@@ -42,26 +42,26 @@ class Employee extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ID' => 'ID',
-            'Last_Name' => 'Last  Name',
-            'First_Name' => 'First  Name',
-            'Position' => 'Position',
+            'id' => 'ID',
+            'emp_fname' => 'Firstname',
+            'emp_lname' => 'Lastname',
+            'emp_position' => 'Position',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getBookings()
+    public function getServiceBookings()
     {
-        return $this->hasMany(Booking::className(), ['Employee_ID' => 'ID']);
+        return $this->hasMany(ServiceBooking::className(), ['employee_id' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getBookingDetails()
+    public function getServiceDetails()
     {
-        return $this->hasMany(BookingDetails::className(), ['Employee_ID' => 'ID']);
+        return $this->hasMany(ServiceDetails::className(), ['employee_id' => 'id']);
     }
 }
